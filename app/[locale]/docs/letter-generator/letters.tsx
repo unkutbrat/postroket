@@ -4,8 +4,15 @@ import { letterTemplates } from '@/src/data/seed';
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import { useState } from 'react';
 
+const DEFAULT_TEMPLATE =
+  letterTemplates[0] ?? ({
+    slug: 'default',
+    title: { en: 'Letter' },
+    body: { en: '' },
+  } as any);
+
 export default function LetterGenerator({ locale }: { locale: string }) {
-  const [template, setTemplate] = useState(letterTemplates[0]);
+  const [template, setTemplate] = useState(DEFAULT_TEMPLATE);
   const [recipient, setRecipient] = useState('Dear Candidate,');
   const [footer, setFooter] = useState('Regards,\nPostroket HR');
 
@@ -19,12 +26,12 @@ export default function LetterGenerator({ locale }: { locale: string }) {
 
     const title =
       (template.title as Record<string, string>)?.[locale] ??
-      template.title?.en ??
+      (template.title as any)?.en ??
       'Letter';
 
     const body =
       (template.body as Record<string, string>)?.[locale] ??
-      template.body?.en ??
+      (template.body as any)?.en ??
       '';
 
     draw(title, 50, 780, 18);
@@ -49,14 +56,14 @@ export default function LetterGenerator({ locale }: { locale: string }) {
           onChange={(e) =>
             setTemplate(
               letterTemplates.find((t) => t.slug === e.target.value) ??
-                letterTemplates[0]
+                DEFAULT_TEMPLATE
             )
           }
           className="w-full border border-slate-200 rounded-lg px-3 py-2"
         >
           {letterTemplates.map((t) => (
             <option key={t.slug} value={t.slug}>
-              {(t.title as Record<string, string>)?.[locale] ?? t.title.en}
+              {(t.title as Record<string, string>)?.[locale] ?? (t.title as any)?.en ?? 'Letter'}
             </option>
           ))}
         </select>
@@ -78,7 +85,7 @@ export default function LetterGenerator({ locale }: { locale: string }) {
 
       <div className="card p-5 space-y-3">
         <div className="text-sm text-slate-700 whitespace-pre-wrap">
-          {(template.body as Record<string, string>)?.[locale] ?? template.body.en}
+          {(template.body as Record<string, string>)?.[locale] ?? (template.body as any)?.en ?? ''}
         </div>
         <button
           onClick={download}
