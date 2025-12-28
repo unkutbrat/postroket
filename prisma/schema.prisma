@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -76,6 +76,8 @@ model JobPost {
   publishedAt    DateTime?
   paymentProvider String? 
   paymentRef     String?
+  employerContact EmployerContact?
+
 }
 
 model EmployerContact {
@@ -223,3 +225,4 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
