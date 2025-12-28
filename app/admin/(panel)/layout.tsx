@@ -1,6 +1,11 @@
-import { AdminSidebar } from '@/src/components/admin/navigation';
-import { requireUser, signOut } from '@/src/lib/auth';
-import { redirect } from 'next/navigation';
+export const dynamic = 'force-dynamic';
+
+import { AnalyticsScript } from '@/src/components/analytics-script';
+import { SiteHeader } from '@/src/components/site-header';
+import { locales } from '@/src/i18n/config';
+import { getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import { notFound } from 'next/navigation';
 
 export default async function AdminPanelLayout({ children }: { children: React.ReactNode }) {
   const user = await requireUser();
