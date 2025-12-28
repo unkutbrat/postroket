@@ -1,0 +1,225 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model InternalUser {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  passwordHash  String
+  name          String
+  role          UserRole
+  permissions   Json
+  active        Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  sessions      Session[]
+  accounts      Account[]
+}
+
+model Tool {
+  id         String   @id @default(cuid())
+  slug       String   @unique
+  category   String
+  enabled    Boolean  @default(true)
+  popular    Boolean  @default(false)
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+  contents   ToolContent[]
+  faqs       ToolFAQ[]
+  analytics  AnalyticsEvent[]
+}
+
+model ToolContent {
+  id          String  @id @default(cuid())
+  tool        Tool    @relation(fields: [toolId], references: [id])
+  toolId      String
+  locale      String
+  title       String
+  description String
+  bodyPath    String
+  uniqueTitle Boolean @default(false)
+}
+
+model ToolFAQ {
+  id       String  @id @default(cuid())
+  tool     Tool    @relation(fields: [toolId], references: [id])
+  toolId   String
+  locale   String
+  question String
+  answer   String
+  order    Int     @default(0)
+}
+
+model JobPost {
+  id             String   @id @default(cuid())
+  slug           String
+  companyName    String
+  title          String
+  description    String
+  locationCity   String
+  locationState  String
+  salaryMin      Int
+  salaryMax      Int
+  experienceMin  Int
+  experienceMax  Int
+  contactEmail   String
+  contactPhone   String
+  featured       Boolean  @default(false)
+  status         JobStatus @default(PENDING)
+  paymentStatus  PaymentStatus @default(UNPAID)
+  createdAt      DateTime @default(now())
+  publishedAt    DateTime?
+  paymentProvider String? 
+  paymentRef     String?
+}
+
+model EmployerContact {
+  id        String   @id @default(cuid())
+  job       JobPost  @relation(fields: [jobId], references: [id])
+  jobId     String
+  email     String?
+  phone     String?
+  createdAt DateTime @default(now())
+}
+
+model BannerAd {
+  id          String   @id @default(cuid())
+  imageUrl    String
+  targetUrl   String
+  placement   String
+  localeTarget String
+  pageTarget  String
+  startAt     DateTime?
+  endAt       DateTime?
+  status      AdStatus @default(ACTIVE)
+  createdAt   DateTime @default(now())
+}
+
+model SiteSettings {
+  id            Int      @id @default(1)
+  siteName      String   @default("Postroket")
+  domain        String   @default("postroket.com")
+  logoUrl       String?
+  faviconUrl    String?
+  contactEmail  String?
+  contactPhone  String?
+  analyticsOn   Boolean  @default(true)
+  glossaryLink  String? 
+}
+
+model PaymentSettings {
+  id               Int      @id @default(1)
+  provider         PaymentProvider @default(MANUAL)
+  razorpayKey      String?
+  razorpaySecret   String?
+  stripeKey        String?
+  stripeSecret     String?
+  currency         String   @default("INR")
+}
+
+model AnalyticsPageView {
+  id        String   @id @default(cuid())
+  path      String
+  locale    String
+  device    String
+  referrer  String?
+  createdAt DateTime @default(now())
+}
+
+model AnalyticsEvent {
+  id        String   @id @default(cuid())
+  type      String
+  payload   Json
+  locale    String?
+  createdAt DateTime @default(now())
+  tool      Tool?    @relation(fields: [toolId], references: [id])
+  toolId    String?
+}
+
+model ToolUsage {
+  id        String   @id @default(cuid())
+  toolSlug  String
+  locale    String
+  createdAt DateTime @default(now())
+}
+
+model GlossaryEntry {
+  id        String   @id @default(cuid())
+  term      String
+  definition String
+  locale    String
+  order     Int      @default(0)
+
+  @@unique([term, locale], name: "term_locale")
+}
+
+enum UserRole {
+  OWNER_ADMIN
+  ADMIN
+  TEAM_MEMBER
+}
+
+enum JobStatus {
+  PENDING
+  PUBLISHED
+  REJECTED
+  EXPIRED
+}
+
+enum PaymentStatus {
+  UNPAID
+  PAID
+  NEEDS_CONFIRMATION
+}
+
+enum PaymentProvider {
+  MANUAL
+  RAZORPAY
+  STRIPE
+}
+
+enum AdStatus {
+  ACTIVE
+  PAUSED
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?  @db.Text
+  access_token      String?  @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?  @db.Text
+  session_state     String?
+
+  user InternalUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user InternalUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}

@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "tools": "ଉପକରଣ",
+    "jobs": "ଚାକିରି",
+    "docs": "ଡ଼କ୍ୟୁମେଣ୍ଟ",
+    "language": "ଭାଷା",
+    "admin": "ପ୍ରଶାସନ",
+    "search": "ସନ୍ଧାନ"
+  },
+  "home": {
+    "heroTitle": "ଆୟ, କର, ଚାକିରି ଏବଂ ଡ଼କ୍ୟୁମେଣ୍ଟ ସହଜ ଭାବେ।",
+    "heroSubtitle": "ପୋସ୍ଟରୋକେଟ୍ ଅଙ୍ଗ୍ରେଜୀ, ହିନ୍ଦୀ ଏବଂ ଓଡ଼ିଆରେ ସହାୟକ ଟୁଲ୍, ଚାକିରି ଏବଂ ଡ଼କ୍ୟୁମେଣ୍ଟ ଜେନେରେଟର ଆଣେ।",
+    "searchPlaceholder": "ଉପକରଣ, ଚାକିରି, ଡ଼କ୍ୟୁମେଣ୍ଟ ସନ୍ଧାନ...",
+    "finance": "ବେତନ ଓ କର ଟୁଲ୍",
+    "jobs": "ଚାକିରି ଏବଂ ନିଯୁକ୍ତି",
+    "docs": "ଡ଼କ୍ୟୁମେଣ୍ଟ ଜେନେରେଟର",
+    "popularTools": "ଲୋକପ୍ରିୟ ଟୁଲ୍",
+    "latestJobs": "ନୂତନ ଚାକିରି",
+    "ads": "ବିଜ୍ଞାପନ",
+    "ctaJobs": "ଚାକିରି ପୋଷ୍ଟ କରନ୍ତୁ",
+    "ctaTools": "ସମସ୍ତ ଟୁଲ୍",
+    "ctaDocs": "ଡ଼କ୍ୟୁମେଣ୍ଟ ତିଆରି କରନ୍ତୁ"
+  },
+  "tools": {
+    "title": "ଆର୍ଥିକ, ବେତନ ଓ କର ଟୁଲ୍",
+    "subtitle": "ଭାରତୀୟ ନିୟମ ଅନୁସାରେ ସଠିକ୍ ହିସାବ ଏବଂ ସହଜ ବିବରଣୀ।",
+    "categories": {
+      "salary": "ବେତନ",
+      "tax": "କର",
+      "gst": "ଜିଏସଟି",
+      "loan": "ରିଣ"
+    },
+    "inputs": {
+      "annualCtc": "ବାର୍ଷିକ CTC",
+      "pfPercent": "ପିଏଫ %",
+      "professionalTax": "ପ୍ରୋଫେସନାଲ କର",
+      "tds": "ଟିଡିଏସ୍ %",
+      "basicSalary": "ମୂଳ ବେତନ",
+      "hraReceived": "ପ୍ରାପ୍ତ HRA",
+      "rentPaid": "ଦିଆ ଭଡା",
+      "metro": "ମେଟ୍ରୋ ସହର",
+      "employeePf": "କର୍ମଚାରୀ ପିଏଫ %",
+      "pfCap": "ପିଏଫ ସୀମା (ଇଚ୍ଛାଧୀନ)",
+      "lastBasic": "ଶେଷ ବେସିକ୍ + DA",
+      "yearsService": "ସେବା ବର୍ଷ",
+      "principal": "ମୂଳଧନ",
+      "rate": "ସୁଦ ହାର (ବାର୍ଷିକ)",
+      "tenure": "ଅବଧି (ମାସ)",
+      "monthlyIncome": "ମାସିକ ଆୟ",
+      "obligations": "ଦେୟ/ଇଏମଆଇ",
+      "gstRate": "ଜିଏସଟି ହାର",
+      "inclusive": "ରାଶିରେ ଜିଏସଟି ସହିତ",
+      "amount": "ରାଶି",
+      "regime": "ପ୍ରଣାଳୀ",
+      "old": "ପୁରୁଣା",
+      "new": "ନୂତନ"
+    },
+    "outputs": {
+      "monthlyInHand": "ମାସିକ ହାତେ",
+      "pf": "ପିଏଫ",
+      "pt": "ପ୍ରୋଫେସନାଲ କର",
+      "tds": "ଟିଡିଏସ୍",
+      "exemption": "HRA ଛୁଟ",
+      "taxableHra": "କରଯୋଗ୍ୟ HRA",
+      "monthlyPf": "ମାସିକ ପିଏଫ",
+      "annualPf": "ବାର୍ଷିକ ପିଏଫ",
+      "gratuity": "ଗ୍ରାଟୁଇଟି",
+      "emi": "EMI",
+      "totalInterest": "ମୋଟ ସୁଦ",
+      "totalPayment": "ମୋଟ ପେମେଣ୍ଟ",
+      "eligible": "ପାତ୍ର ରାଶି",
+      "gst": "GST ରାଶି",
+      "total": "ମୋଟ",
+      "incomeTax": "ଆନୁମାନିକ କର"
+    }
+  },
+  "jobs": {
+    "title": "ଭାରତରେ ଚାକିରି",
+    "subtitle": "ସହର, ଶ୍ରେଣୀ, ବେତନ, ଅନୁଭବ ଓ ପ୍ରକାର ଫିଲ୍ଟର।",
+    "postJob": "ଚାକିରି ପୋଷ୍ଟ",
+    "apply": "ସମ୍ପର୍କ ଦେଖାନ୍ତୁ",
+    "contactEmail": "ସମ୍ପର୍କ ଇମେଲ୍",
+    "contactPhone": "ସମ୍ପର୍କ ଫୋନ",
+    "salaryRange": "ବେତନ ସୀମା",
+    "experienceRange": "ଅନୁଭବ",
+    "location": "ଅବସ୍ଥାନ",
+    "filters": {
+      "search": "ଶିରୋନାମ/କମ୍ପାନି ସନ୍ଧାନ",
+      "city": "ସହର",
+      "state": "ରାଜ୍ୟ",
+      "category": "ଶ୍ରେଣୀ",
+      "experience": "ଅନୁଭବ (ବର୍ଷ)",
+      "salary": "ବେତନ ସୀମା",
+      "type": "ଚାକିରି ପ୍ରକାର"
+    },
+    "status": {
+      "pending": "ଅନୁମୋଦନ ଅପେକ୍ଷା",
+      "published": "ପ୍ରକାଶିତ",
+      "rejected": "ପ୍ରତ୍ୟାଖ୍ୟାନ",
+      "expired": "ସମୟସୀମା ସମାପ୍ତ"
+    }
+  },
+  "docs": {
+    "title": "ଡ଼କ୍ୟୁମେଣ୍ଟ ଜେନେରେଟର",
+    "subtitle": "ଇନଭଏସ୍, ବାୟୋଡାଟା ଏବଂ ଚିଠିକୁ PDF ଭାବେ ସୃଷ୍ଟି କରନ୍ତୁ।",
+    "invoice": "ଇନଭଏସ୍ ଜେନେରେଟର",
+    "resume": "ରେଜ୍ୟୁମେ ବିଲ୍ଡର",
+    "letter": "ପତ୍ର ଜେନେରେଟର"
+  },
+  "admin": {
+    "title": "ପ୍ରଶାସନ ପ୍ୟାନେଲ",
+    "login": "ଲଗଇନ",
+    "email": "ଇମେଲ୍",
+    "password": "ପାସୱାର୍ଡ",
+    "signIn": "ସାଇନ୍ ଇନ୍",
+    "dashboard": "ଡ୍ୟାଶବୋର୍ଡ",
+    "tools": "ଟୁଲ୍",
+    "jobs": "ଚାକିରି",
+    "docs": "ଡକ୍ସ",
+    "ads": "ବିଜ୍ଞାପନ",
+    "seo": "SEO",
+    "users": "ଉପଯୋଗକର୍ତ୍ତା",
+    "settings": "ସେଟିଂ",
+    "analytics": "ବିଶ୍ଳେଷଣ",
+    "logout": "ଲଗଆଉଟ୍"
+  },
+  "common": {
+    "save": "ସେଭ୍",
+    "create": "ତିଆରି",
+    "update": "ଅପଡେଟ୍",
+    "cancel": "ବାତିଲ",
+    "delete": "ହଟାନ୍ତୁ",
+    "status": "ସ୍ଥିତି",
+    "enabled": "ସକ୍ରିୟ",
+    "disabled": "ନିଷ୍କ୍ରିୟ",
+    "featured": "ବିଶେଷ",
+    "popular": "ଲୋକପ୍ରିୟ",
+    "submit": "ଦାଖଲ",
+    "description": "ବିବରଣୀ"
+  },
+  "policy": {
+    "privacy": "ଗୋପନୀୟତା ନୀତି",
+    "terms": "ସର୍ତ୍ତାବଳୀ",
+    "disclaimer": "ଅସ୍ୱୀକାର ସୂଚନା"
+  }
+}
