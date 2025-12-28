@@ -83,7 +83,7 @@ model JobPost {
 model EmployerContact {
   id        String   @id @default(cuid())
   job       JobPost  @relation(fields: [jobId], references: [id])
-  jobId     String
+  jobId     String   @unique
   email     String?
   phone     String?
   createdAt DateTime @default(now())
