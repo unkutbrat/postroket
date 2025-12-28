@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "tools": "Tools",
+    "jobs": "Jobs",
+    "docs": "Documents",
+    "language": "Language",
+    "admin": "Admin",
+    "search": "Search"
+  },
+  "home": {
+    "heroTitle": "Financial clarity, hiring confidence, and smart documents for India.",
+    "heroSubtitle": "Postroket brings calculators, jobs, and ready-to-use document generators in English, Hindi, and Odia.",
+    "searchPlaceholder": "Search tools, jobs, documents...",
+    "finance": "Finance & Salary Tools",
+    "jobs": "Jobs & Hiring",
+    "docs": "Document Generators",
+    "popularTools": "Popular tools",
+    "latestJobs": "Latest jobs",
+    "ads": "Sponsored",
+    "ctaJobs": "Post a job",
+    "ctaTools": "Explore tools",
+    "ctaDocs": "Generate documents"
+  },
+  "tools": {
+    "title": "Finance, salary, and tax tools",
+    "subtitle": "Accurate India-ready calculators with clear explanations and FAQs.",
+    "categories": {
+      "salary": "Salary",
+      "tax": "Tax",
+      "gst": "GST",
+      "loan": "Loan"
+    },
+    "inputs": {
+      "annualCtc": "Annual CTC",
+      "pfPercent": "PF %",
+      "professionalTax": "Professional tax",
+      "tds": "TDS %",
+      "basicSalary": "Basic salary",
+      "hraReceived": "HRA received",
+      "rentPaid": "Rent paid",
+      "metro": "Metro city",
+      "employeePf": "Employee PF %",
+      "pfCap": "PF cap (optional)",
+      "lastBasic": "Last drawn basic + DA",
+      "yearsService": "Years of service",
+      "principal": "Principal",
+      "rate": "Interest rate (p.a.)",
+      "tenure": "Tenure (months)",
+      "monthlyIncome": "Monthly income",
+      "obligations": "Existing obligations",
+      "gstRate": "GST rate",
+      "inclusive": "Amount includes GST",
+      "amount": "Amount",
+      "regime": "Regime",
+      "old": "Old",
+      "new": "New"
+    },
+    "outputs": {
+      "monthlyInHand": "Monthly in-hand",
+      "pf": "PF",
+      "pt": "Professional tax",
+      "tds": "TDS",
+      "exemption": "HRA exemption",
+      "taxableHra": "Taxable HRA",
+      "monthlyPf": "Monthly PF",
+      "annualPf": "Annual PF",
+      "gratuity": "Gratuity",
+      "emi": "EMI",
+      "totalInterest": "Total interest",
+      "totalPayment": "Total payment",
+      "eligible": "Eligible amount",
+      "gst": "GST amount",
+      "total": "Total with GST",
+      "incomeTax": "Estimated tax"
+    }
+  },
+  "jobs": {
+    "title": "Jobs across India",
+    "subtitle": "Filter by city, category, salary, experience, and type.",
+    "postJob": "Post a job",
+    "apply": "Reveal contact",
+    "contactEmail": "Contact email",
+    "contactPhone": "Contact phone",
+    "salaryRange": "Salary range",
+    "experienceRange": "Experience",
+    "location": "Location",
+    "filters": {
+      "search": "Search title or company",
+      "city": "City",
+      "state": "State",
+      "category": "Category",
+      "experience": "Experience (years)",
+      "salary": "Salary range",
+      "type": "Job type"
+    },
+    "status": {
+      "pending": "Pending approval",
+      "published": "Published",
+      "rejected": "Rejected",
+      "expired": "Expired"
+    }
+  },
+  "docs": {
+    "title": "Document generators",
+    "subtitle": "Create invoices, resumes, and professional letters with exportable PDFs.",
+    "invoice": "Invoice generator",
+    "resume": "Resume builder",
+    "letter": "Letter generator"
+  },
+  "admin": {
+    "title": "Admin panel",
+    "login": "Admin login",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "dashboard": "Dashboard",
+    "tools": "Tools",
+    "jobs": "Jobs",
+    "docs": "Documents",
+    "ads": "Ads & banners",
+    "seo": "SEO & Content",
+    "users": "Users & Roles",
+    "settings": "Settings",
+    "analytics": "Analytics",
+    "logout": "Log out"
+  },
+  "common": {
+    "save": "Save",
+    "create": "Create",
+    "update": "Update",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "status": "Status",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "featured": "Featured",
+    "popular": "Popular",
+    "submit": "Submit",
+    "description": "Description"
+  },
+  "policy": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "disclaimer": "Disclaimer"
+  }
+}

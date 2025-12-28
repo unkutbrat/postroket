@@ -1,0 +1,9 @@
+node_modules
+.next
+.env.local
+.env.production
+*.log
+uploads
+public/uploads/*
+!.gitkeep
+prisma/dev.db
